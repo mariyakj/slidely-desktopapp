@@ -36,11 +36,12 @@ Partial Class Form2
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DeleteButton = New System.Windows.Forms.Button()
         Me.EditButton = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'NameTextBox
         '
-        Me.NameTextBox.Location = New System.Drawing.Point(335, 51)
+        Me.NameTextBox.Location = New System.Drawing.Point(296, 78)
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.ReadOnly = True
         Me.NameTextBox.Size = New System.Drawing.Size(200, 22)
@@ -48,7 +49,7 @@ Partial Class Form2
         '
         'EmailTextBox
         '
-        Me.EmailTextBox.Location = New System.Drawing.Point(335, 81)
+        Me.EmailTextBox.Location = New System.Drawing.Point(296, 108)
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.ReadOnly = True
         Me.EmailTextBox.Size = New System.Drawing.Size(200, 22)
@@ -56,7 +57,7 @@ Partial Class Form2
         '
         'PhoneTextBox
         '
-        Me.PhoneTextBox.Location = New System.Drawing.Point(335, 111)
+        Me.PhoneTextBox.Location = New System.Drawing.Point(296, 138)
         Me.PhoneTextBox.Name = "PhoneTextBox"
         Me.PhoneTextBox.ReadOnly = True
         Me.PhoneTextBox.Size = New System.Drawing.Size(200, 22)
@@ -64,7 +65,7 @@ Partial Class Form2
         '
         'GitHubTextBox
         '
-        Me.GitHubTextBox.Location = New System.Drawing.Point(335, 141)
+        Me.GitHubTextBox.Location = New System.Drawing.Point(296, 168)
         Me.GitHubTextBox.Name = "GitHubTextBox"
         Me.GitHubTextBox.ReadOnly = True
         Me.GitHubTextBox.Size = New System.Drawing.Size(200, 22)
@@ -72,7 +73,7 @@ Partial Class Form2
         '
         'StopwatchTextBox
         '
-        Me.StopwatchTextBox.Location = New System.Drawing.Point(335, 171)
+        Me.StopwatchTextBox.Location = New System.Drawing.Point(296, 198)
         Me.StopwatchTextBox.Name = "StopwatchTextBox"
         Me.StopwatchTextBox.ReadOnly = True
         Me.StopwatchTextBox.Size = New System.Drawing.Size(200, 22)
@@ -81,9 +82,9 @@ Partial Class Form2
         'PreviousButton
         '
         Me.PreviousButton.BackColor = System.Drawing.Color.LightBlue
-        Me.PreviousButton.Location = New System.Drawing.Point(246, 214)
+        Me.PreviousButton.Location = New System.Drawing.Point(207, 241)
         Me.PreviousButton.Name = "PreviousButton"
-        Me.PreviousButton.Size = New System.Drawing.Size(160, 30)
+        Me.PreviousButton.Size = New System.Drawing.Size(169, 40)
         Me.PreviousButton.TabIndex = 5
         Me.PreviousButton.Text = "PREVIOUS (CTRL + P)"
         Me.PreviousButton.UseVisualStyleBackColor = False
@@ -91,9 +92,9 @@ Partial Class Form2
         'NextButton
         '
         Me.NextButton.BackColor = System.Drawing.Color.LightBlue
-        Me.NextButton.Location = New System.Drawing.Point(435, 214)
+        Me.NextButton.Location = New System.Drawing.Point(396, 241)
         Me.NextButton.Name = "NextButton"
-        Me.NextButton.Size = New System.Drawing.Size(160, 30)
+        Me.NextButton.Size = New System.Drawing.Size(160, 40)
         Me.NextButton.TabIndex = 6
         Me.NextButton.Text = "NEXT (CTRL + N)"
         Me.NextButton.UseVisualStyleBackColor = False
@@ -101,7 +102,7 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(258, 57)
+        Me.Label1.Location = New System.Drawing.Point(219, 84)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 16)
         Me.Label1.TabIndex = 7
@@ -110,7 +111,7 @@ Partial Class Form2
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(258, 87)
+        Me.Label2.Location = New System.Drawing.Point(219, 114)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 16)
         Me.Label2.TabIndex = 8
@@ -119,7 +120,7 @@ Partial Class Form2
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(222, 117)
+        Me.Label3.Location = New System.Drawing.Point(183, 144)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(77, 16)
         Me.Label3.TabIndex = 9
@@ -128,7 +129,7 @@ Partial Class Form2
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(160, 147)
+        Me.Label4.Location = New System.Drawing.Point(121, 174)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(142, 16)
         Me.Label4.TabIndex = 10
@@ -137,7 +138,7 @@ Partial Class Form2
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(199, 177)
+        Me.Label5.Location = New System.Drawing.Point(160, 204)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(103, 16)
         Me.Label5.TabIndex = 11
@@ -145,23 +146,34 @@ Partial Class Form2
         '
         'DeleteButton
         '
-        Me.DeleteButton.BackColor = System.Drawing.Color.Coral
-        Me.DeleteButton.Location = New System.Drawing.Point(246, 259)
+        Me.DeleteButton.BackColor = System.Drawing.Color.FloralWhite
+        Me.DeleteButton.Location = New System.Drawing.Point(207, 298)
         Me.DeleteButton.Name = "DeleteButton"
-        Me.DeleteButton.Size = New System.Drawing.Size(160, 34)
+        Me.DeleteButton.Size = New System.Drawing.Size(169, 34)
         Me.DeleteButton.TabIndex = 12
         Me.DeleteButton.Text = "DELETE (CTRL + D)"
         Me.DeleteButton.UseVisualStyleBackColor = False
         '
         'EditButton
         '
-        Me.EditButton.BackColor = System.Drawing.Color.Coral
-        Me.EditButton.Location = New System.Drawing.Point(435, 259)
+        Me.EditButton.BackColor = System.Drawing.Color.FloralWhite
+        Me.EditButton.Location = New System.Drawing.Point(396, 298)
         Me.EditButton.Name = "EditButton"
         Me.EditButton.Size = New System.Drawing.Size(160, 34)
         Me.EditButton.TabIndex = 13
         Me.EditButton.Text = "EDIT (CTRL + E)"
         Me.EditButton.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Century", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label6.Location = New System.Drawing.Point(182, 26)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(407, 21)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "Mariya KJ, Slidely Task2 - Slidely Form App"
         '
         'Form2
         '
@@ -169,6 +181,7 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(722, 407)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.EditButton)
         Me.Controls.Add(Me.DeleteButton)
         Me.Controls.Add(Me.Label5)
@@ -183,6 +196,7 @@ Partial Class Form2
         Me.Controls.Add(Me.PhoneTextBox)
         Me.Controls.Add(Me.EmailTextBox)
         Me.Controls.Add(Me.NameTextBox)
+        Me.ForeColor = System.Drawing.Color.DarkMagenta
         Me.Name = "Form2"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
@@ -204,4 +218,5 @@ Partial Class Form2
     Friend WithEvents Label5 As Label
     Friend WithEvents DeleteButton As Button
     Friend WithEvents EditButton As Button
+    Friend WithEvents Label6 As Label
 End Class

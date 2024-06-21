@@ -5,11 +5,28 @@ Imports System.Diagnostics
 
 Public Class Form3
     Private submissionId As Integer = -1 ' Initialize with an invalid ID
+    Private isNewSubmission As Boolean = False ' Flag to indicate if this is a new submission
     Private stopwatch As Stopwatch = New Stopwatch() ' Initialize the Stopwatch instance
     Private initialElapsedTime As TimeSpan = TimeSpan.Zero ' Track initial elapsed time
 
+    ' Method to set the form for a new submission
+    Public Sub SetAsNewSubmission()
+        isNewSubmission = True
+        ' Reset form fields for new submission
+        NameTextBox.Text = ""
+        EmailTextBox.Text = ""
+        PhoneTextBox.Text = ""
+        GitHubTextBox.Text = ""
+        StopwatchTextBox.Text = "00:00:00"
+        ' Reset the stopwatch
+        stopwatch.Reset()
+        initialElapsedTime = TimeSpan.Zero
+    End Sub
+
+    ' Method to load submission details for editing
     Public Async Function LoadSubmissionDetails(submissionId As Integer, name As String, email As String, phone As String, githubLink As String, elapsedTime As String) As Task
         Me.submissionId = submissionId
+        isNewSubmission = False ' Indicate this is not a new submission
 
         ' Populate UI with submission data
         NameTextBox.Text = name
@@ -49,8 +66,14 @@ Public Class Form3
         Dim githubLink As String = GitHubTextBox.Text
         Dim elapsedTime As String = StopwatchTextBox.Text
 
+        ' Validate form fields (example: check if required fields are filled)
+        If String.IsNullOrWhiteSpace(name) OrElse String.IsNullOrWhiteSpace(email) Then
+            MessageBox.Show("Name and Email are required fields.")
+            Return
+        End If
+
+        ' Construct the submission object
         Dim submission = New With {
-            .id = submissionId, ' Ensure the ID is included in the update payload
             .name = name,
             .email = email,
             .phone = phone,
@@ -58,20 +81,45 @@ Public Class Form3
             .stopwatch_time = elapsedTime
         }
 
-        Using client As New HttpClient()
-            Dim json As String = JsonConvert.SerializeObject(submission)
-            Dim content As New StringContent(json, System.Text.Encoding.UTF8, "application/json")
-            Dim url As String = $"http://localhost:3000/edit/{submissionId}"
-            Dim response As HttpResponseMessage = Await client.PutAsync(url, content)
+        ' Disable the SubmitButton to prevent multiple submissions
+        SubmitButton.Enabled = False
 
-            If response.IsSuccessStatusCode Then
-                MessageBox.Show("Submission updated successfully!")
+        Try
+            Using client As New HttpClient()
+                Dim json As String = JsonConvert.SerializeObject(submission)
+                Dim content As New StringContent(json, System.Text.Encoding.UTF8, "application/json")
+                Dim response As HttpResponseMessage
+
+                If isNewSubmission Then
+                    response = Await client.PostAsync("http://localhost:3000/submit", content) ' POST for new submissions
+                    If response.IsSuccessStatusCode Then
+                        Dim jsonResponse As String = Await response.Content.ReadAsStringAsync()
+                        Dim responseObject = JsonConvert.DeserializeObject(Of Dictionary(Of String, Object))(jsonResponse)
+                        Dim newId = Convert.ToInt32(responseObject("id"))
+                        submissionId = newId ' Update the submissionId with the new ID
+                        MessageBox.Show("Submission saved successfully with ID: " & newId)
+                    Else
+                        MessageBox.Show("Failed to save submission")
+                    End If
+                Else
+                    Dim url As String = $"http://localhost:3000/edit/{submissionId}"
+                    response = Await client.PutAsync(url, content) ' PUT for existing submissions
+                    If response.IsSuccessStatusCode Then
+                        MessageBox.Show("Submission updated successfully!")
+                    Else
+                        MessageBox.Show("Failed to update submission")
+                    End If
+                End If
+
                 Me.DialogResult = DialogResult.OK ' Indicate successful submission
                 Me.Close() ' Close Form3 after successful update
-            Else
-                MessageBox.Show("Failed to update submission")
-            End If
-        End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred while saving submission: {ex.Message}")
+        Finally
+            ' Re-enable the SubmitButton after the submission process finishes (success or failure)
+            SubmitButton.Enabled = True
+        End Try
     End Sub
 
     Private Sub Form3_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown

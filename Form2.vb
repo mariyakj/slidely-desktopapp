@@ -17,18 +17,26 @@ Public Class Form2
             Dim response As HttpResponseMessage = Await client.GetAsync(url)
 
             If response.IsSuccessStatusCode Then
-                Dim jsonResponse As String = Await response.Content.ReadAsStringAsync()
-                Dim submission As Submission = JsonConvert.DeserializeObject(Of Submission)(jsonResponse)
+                Try
+                    Dim jsonResponse As String = Await response.Content.ReadAsStringAsync()
+                    Dim submission As Submission = JsonConvert.DeserializeObject(Of Submission)(jsonResponse)
 
-                ' Populate UI with submission data
-                NameTextBox.Text = submission.name
-                EmailTextBox.Text = submission.email
-                PhoneTextBox.Text = submission.phone
-                GitHubTextBox.Text = submission.github_link
-                StopwatchTextBox.Text = submission.stopwatch_time
+                    If submission IsNot Nothing Then
+                        ' Populate UI with submission data
+                        NameTextBox.Text = submission.name
+                        EmailTextBox.Text = submission.email
+                        PhoneTextBox.Text = submission.phone
+                        GitHubTextBox.Text = submission.github_link
+                        StopwatchTextBox.Text = submission.stopwatch_time
 
-                ' Store current submission ID for edit/delete operations
-                currentSubmissionId = submission.id
+                        ' Store current submission ID for edit/delete operations
+                        currentSubmissionId = submission.id
+                    Else
+                        MessageBox.Show("Invalid submission data received.")
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show($"Error deserializing JSON: {ex.Message}")
+                End Try
             Else
                 MessageBox.Show("No more submissions")
             End If
@@ -50,13 +58,17 @@ Public Class Form2
     Private Async Sub EditButton_Click(sender As Object, e As EventArgs) Handles EditButton.Click
         Dim form3 As New Form3()
 
-        ' Populate Form3 with the current submission details
-        Await form3.LoadSubmissionDetails(currentSubmissionId, NameTextBox.Text, EmailTextBox.Text, PhoneTextBox.Text, GitHubTextBox.Text, StopwatchTextBox.Text)
+        Try
+            ' Populate Form3 with the current submission details
+            Await form3.LoadSubmissionDetails(currentSubmissionId, NameTextBox.Text, EmailTextBox.Text, PhoneTextBox.Text, GitHubTextBox.Text, StopwatchTextBox.Text)
 
-        If form3.ShowDialog() = DialogResult.OK Then
-            ' Reload submission details in Form2 after editing in Form3
-            Await LoadSubmission(currentIndex)
-        End If
+            If form3.ShowDialog() = DialogResult.OK Then
+                ' Reload submission details in Form2 after editing in Form3
+                Await LoadSubmission(currentIndex)
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"Error loading submission details: {ex.Message}")
+        End Try
     End Sub
 
     Private Async Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
@@ -93,7 +105,7 @@ Public Class Form2
     End Sub
 
     ' Submission Class
-    Private Class Submission
+    Public Class Submission
         Public Property id As Integer
         Public Property name As String
         Public Property email As String
@@ -101,4 +113,8 @@ Public Class Form2
         Public Property github_link As String
         Public Property stopwatch_time As String
     End Class
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+        ' Optional: Handle click events on Label6
+    End Sub
 End Class
