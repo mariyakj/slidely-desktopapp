@@ -117,4 +117,12 @@ Public Class Form2
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
         ' Optional: Handle click events on Label6
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
 End Class

@@ -139,4 +139,8 @@ Public Class Form3
     Private Sub PhoneTextBox_TextChanged(sender As Object, e As EventArgs) Handles PhoneTextBox.TextChanged
         ' Additional functionality can be added here if needed
     End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
 End Class

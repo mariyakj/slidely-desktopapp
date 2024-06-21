@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form2
     Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    ' Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -14,14 +14,15 @@ Partial Class Form2
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
+    ' Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    ' NOTE: The following procedure is required by the Windows Form Designer
+    ' It can be modified using the Windows Form Designer.
+    ' Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.NameTextBox = New System.Windows.Forms.TextBox()
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.PhoneTextBox = New System.Windows.Forms.TextBox()
@@ -37,54 +38,63 @@ Partial Class Form2
         Me.DeleteButton = New System.Windows.Forms.Button()
         Me.EditButton = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'NameTextBox
         '
-        Me.NameTextBox.Location = New System.Drawing.Point(296, 78)
+        Me.NameTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.NameTextBox.Location = New System.Drawing.Point(362, 69)
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.ReadOnly = True
-        Me.NameTextBox.Size = New System.Drawing.Size(200, 22)
+        Me.NameTextBox.Size = New System.Drawing.Size(250, 34)
         Me.NameTextBox.TabIndex = 0
         '
         'EmailTextBox
         '
-        Me.EmailTextBox.Location = New System.Drawing.Point(296, 108)
+        Me.EmailTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.EmailTextBox.Location = New System.Drawing.Point(362, 118)
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.ReadOnly = True
-        Me.EmailTextBox.Size = New System.Drawing.Size(200, 22)
+        Me.EmailTextBox.Size = New System.Drawing.Size(250, 34)
         Me.EmailTextBox.TabIndex = 1
         '
         'PhoneTextBox
         '
-        Me.PhoneTextBox.Location = New System.Drawing.Point(296, 138)
+        Me.PhoneTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.PhoneTextBox.Location = New System.Drawing.Point(362, 168)
         Me.PhoneTextBox.Name = "PhoneTextBox"
         Me.PhoneTextBox.ReadOnly = True
-        Me.PhoneTextBox.Size = New System.Drawing.Size(200, 22)
+        Me.PhoneTextBox.Size = New System.Drawing.Size(250, 34)
         Me.PhoneTextBox.TabIndex = 2
         '
         'GitHubTextBox
         '
-        Me.GitHubTextBox.Location = New System.Drawing.Point(296, 168)
+        Me.GitHubTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.GitHubTextBox.Location = New System.Drawing.Point(362, 218)
         Me.GitHubTextBox.Name = "GitHubTextBox"
         Me.GitHubTextBox.ReadOnly = True
-        Me.GitHubTextBox.Size = New System.Drawing.Size(200, 22)
+        Me.GitHubTextBox.Size = New System.Drawing.Size(250, 34)
         Me.GitHubTextBox.TabIndex = 3
         '
         'StopwatchTextBox
         '
-        Me.StopwatchTextBox.Location = New System.Drawing.Point(296, 198)
+        Me.StopwatchTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.StopwatchTextBox.Location = New System.Drawing.Point(362, 267)
         Me.StopwatchTextBox.Name = "StopwatchTextBox"
         Me.StopwatchTextBox.ReadOnly = True
-        Me.StopwatchTextBox.Size = New System.Drawing.Size(200, 22)
+        Me.StopwatchTextBox.Size = New System.Drawing.Size(250, 34)
         Me.StopwatchTextBox.TabIndex = 4
         '
         'PreviousButton
         '
         Me.PreviousButton.BackColor = System.Drawing.Color.LightBlue
-        Me.PreviousButton.Location = New System.Drawing.Point(207, 241)
+        Me.PreviousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PreviousButton.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.PreviousButton.ForeColor = System.Drawing.Color.Black
+        Me.PreviousButton.Location = New System.Drawing.Point(186, 321)
         Me.PreviousButton.Name = "PreviousButton"
-        Me.PreviousButton.Size = New System.Drawing.Size(169, 40)
+        Me.PreviousButton.Size = New System.Drawing.Size(200, 40)
         Me.PreviousButton.TabIndex = 5
         Me.PreviousButton.Text = "PREVIOUS (CTRL + P)"
         Me.PreviousButton.UseVisualStyleBackColor = False
@@ -92,9 +102,12 @@ Partial Class Form2
         'NextButton
         '
         Me.NextButton.BackColor = System.Drawing.Color.LightBlue
-        Me.NextButton.Location = New System.Drawing.Point(396, 241)
+        Me.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NextButton.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.NextButton.ForeColor = System.Drawing.Color.Black
+        Me.NextButton.Location = New System.Drawing.Point(412, 321)
         Me.NextButton.Name = "NextButton"
-        Me.NextButton.Size = New System.Drawing.Size(160, 40)
+        Me.NextButton.Size = New System.Drawing.Size(200, 40)
         Me.NextButton.TabIndex = 6
         Me.NextButton.Text = "NEXT (CTRL + N)"
         Me.NextButton.UseVisualStyleBackColor = False
@@ -102,54 +115,67 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(219, 84)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label1.Location = New System.Drawing.Point(238, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 16)
+        Me.Label1.Size = New System.Drawing.Size(68, 28)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Name"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(219, 114)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label2.Location = New System.Drawing.Point(238, 118)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 16)
+        Me.Label2.Size = New System.Drawing.Size(64, 28)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Email"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(183, 144)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label3.Location = New System.Drawing.Point(183, 168)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 16)
+        Me.Label3.Size = New System.Drawing.Size(123, 28)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Phone Num"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(121, 174)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label4.Location = New System.Drawing.Point(81, 224)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(142, 16)
+        Me.Label4.Size = New System.Drawing.Size(225, 28)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = " Github Link For Task 2"
+        Me.Label4.Text = "GitHub Link For Task 2"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(160, 204)
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.Label5.Location = New System.Drawing.Point(141, 267)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(103, 16)
+        Me.Label5.Size = New System.Drawing.Size(165, 28)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Stopwatch Time"
         '
         'DeleteButton
         '
         Me.DeleteButton.BackColor = System.Drawing.Color.FloralWhite
-        Me.DeleteButton.Location = New System.Drawing.Point(207, 298)
+        Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteButton.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.DeleteButton.ForeColor = System.Drawing.Color.Black
+        Me.DeleteButton.Location = New System.Drawing.Point(186, 377)
         Me.DeleteButton.Name = "DeleteButton"
-        Me.DeleteButton.Size = New System.Drawing.Size(169, 34)
+        Me.DeleteButton.Size = New System.Drawing.Size(200, 40)
         Me.DeleteButton.TabIndex = 12
         Me.DeleteButton.Text = "DELETE (CTRL + D)"
         Me.DeleteButton.UseVisualStyleBackColor = False
@@ -157,9 +183,12 @@ Partial Class Form2
         'EditButton
         '
         Me.EditButton.BackColor = System.Drawing.Color.FloralWhite
-        Me.EditButton.Location = New System.Drawing.Point(396, 298)
+        Me.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.EditButton.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.EditButton.ForeColor = System.Drawing.Color.Black
+        Me.EditButton.Location = New System.Drawing.Point(412, 377)
         Me.EditButton.Name = "EditButton"
-        Me.EditButton.Size = New System.Drawing.Size(160, 34)
+        Me.EditButton.Size = New System.Drawing.Size(200, 40)
         Me.EditButton.TabIndex = 13
         Me.EditButton.Text = "EDIT (CTRL + E)"
         Me.EditButton.UseVisualStyleBackColor = False
@@ -167,20 +196,24 @@ Partial Class Form2
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Century", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.DarkMagenta
         Me.Label6.Location = New System.Drawing.Point(182, 26)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(407, 21)
+        Me.Label6.Size = New System.Drawing.Size(470, 23)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Mariya KJ, Slidely Task2 - Slidely Form App"
+        '
+        'ToolTip1
+        '
+        Me.ToolTip1.ToolTipTitle = "Click here"
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(722, 407)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.EditButton)
         Me.Controls.Add(Me.DeleteButton)
@@ -219,4 +252,6 @@ Partial Class Form2
     Friend WithEvents DeleteButton As Button
     Friend WithEvents EditButton As Button
     Friend WithEvents Label6 As Label
+    Friend WithEvents ToolTip1 As ToolTip
+
 End Class

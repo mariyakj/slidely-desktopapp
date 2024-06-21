@@ -40,45 +40,58 @@ Partial Class Form3
         '
         'NameTextBox
         '
-        Me.NameTextBox.Location = New System.Drawing.Point(398, 97)
+        Me.NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.NameTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.NameTextBox.Location = New System.Drawing.Point(400, 110)
         Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(210, 22)
+        Me.NameTextBox.Size = New System.Drawing.Size(250, 30)
         Me.NameTextBox.TabIndex = 0
         '
         'EmailTextBox
         '
-        Me.EmailTextBox.Location = New System.Drawing.Point(398, 127)
+        Me.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.EmailTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.EmailTextBox.Location = New System.Drawing.Point(400, 150)
         Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(210, 22)
+        Me.EmailTextBox.Size = New System.Drawing.Size(250, 30)
         Me.EmailTextBox.TabIndex = 1
         '
         'PhoneTextBox
         '
-        Me.PhoneTextBox.Location = New System.Drawing.Point(398, 157)
+        Me.PhoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PhoneTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.PhoneTextBox.Location = New System.Drawing.Point(400, 190)
         Me.PhoneTextBox.Name = "PhoneTextBox"
-        Me.PhoneTextBox.Size = New System.Drawing.Size(210, 22)
+        Me.PhoneTextBox.Size = New System.Drawing.Size(250, 30)
         Me.PhoneTextBox.TabIndex = 2
         '
         'GitHubTextBox
         '
-        Me.GitHubTextBox.Location = New System.Drawing.Point(398, 187)
+        Me.GitHubTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.GitHubTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.GitHubTextBox.Location = New System.Drawing.Point(400, 230)
         Me.GitHubTextBox.Name = "GitHubTextBox"
-        Me.GitHubTextBox.Size = New System.Drawing.Size(208, 22)
+        Me.GitHubTextBox.Size = New System.Drawing.Size(250, 30)
         Me.GitHubTextBox.TabIndex = 3
         '
         'StopwatchTextBox
         '
-        Me.StopwatchTextBox.Location = New System.Drawing.Point(398, 233)
+        Me.StopwatchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.StopwatchTextBox.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.StopwatchTextBox.Location = New System.Drawing.Point(400, 270)
         Me.StopwatchTextBox.Name = "StopwatchTextBox"
-        Me.StopwatchTextBox.Size = New System.Drawing.Size(208, 22)
+        Me.StopwatchTextBox.Size = New System.Drawing.Size(250, 30)
         Me.StopwatchTextBox.TabIndex = 4
         '
         'StartStopButton
         '
         Me.StartStopButton.BackColor = System.Drawing.Color.LightYellow
-        Me.StartStopButton.Location = New System.Drawing.Point(97, 229)
+        Me.StartStopButton.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.StartStopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.StartStopButton.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.StartStopButton.Location = New System.Drawing.Point(62, 265)
         Me.StartStopButton.Name = "StartStopButton"
-        Me.StartStopButton.Size = New System.Drawing.Size(272, 26)
+        Me.StartStopButton.Size = New System.Drawing.Size(294, 35)
         Me.StartStopButton.TabIndex = 5
         Me.StartStopButton.Text = "TOGGLE STOPWATCH (CTRL + T)"
         Me.StartStopButton.UseVisualStyleBackColor = False
@@ -86,7 +99,10 @@ Partial Class Form3
         'SubmitButton
         '
         Me.SubmitButton.BackColor = System.Drawing.Color.LightBlue
-        Me.SubmitButton.Location = New System.Drawing.Point(134, 278)
+        Me.SubmitButton.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SubmitButton.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.SubmitButton.Location = New System.Drawing.Point(134, 330)
         Me.SubmitButton.Name = "SubmitButton"
         Me.SubmitButton.Size = New System.Drawing.Size(472, 61)
         Me.SubmitButton.TabIndex = 6
@@ -96,36 +112,40 @@ Partial Class Form3
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(325, 97)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Label1.Location = New System.Drawing.Point(300, 110)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 16)
+        Me.Label1.Size = New System.Drawing.Size(56, 23)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Name"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(328, 133)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Label2.Location = New System.Drawing.Point(300, 150)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 16)
+        Me.Label2.Size = New System.Drawing.Size(51, 23)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Email"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(292, 163)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Label3.Location = New System.Drawing.Point(249, 190)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 16)
+        Me.Label3.Size = New System.Drawing.Size(102, 23)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Phone Num"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(233, 193)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Label4.Location = New System.Drawing.Point(185, 230)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(136, 16)
+        Me.Label4.Size = New System.Drawing.Size(171, 23)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Github Link For Task2"
         '
@@ -139,7 +159,7 @@ Partial Class Form3
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label6.Location = New System.Drawing.Point(201, 40)
+        Me.Label6.Location = New System.Drawing.Point(200, 40)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(407, 21)
         Me.Label6.TabIndex = 15
@@ -149,8 +169,8 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(1349, 747)
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
