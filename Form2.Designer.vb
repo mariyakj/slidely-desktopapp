@@ -47,7 +47,7 @@ Partial Class Form2
         Me.NameTextBox.Location = New System.Drawing.Point(362, 69)
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.ReadOnly = True
-        Me.NameTextBox.Size = New System.Drawing.Size(250, 34)
+        Me.NameTextBox.Size = New System.Drawing.Size(250, 30)
         Me.NameTextBox.TabIndex = 0
         '
         'EmailTextBox
@@ -56,7 +56,7 @@ Partial Class Form2
         Me.EmailTextBox.Location = New System.Drawing.Point(362, 118)
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.ReadOnly = True
-        Me.EmailTextBox.Size = New System.Drawing.Size(250, 34)
+        Me.EmailTextBox.Size = New System.Drawing.Size(250, 30)
         Me.EmailTextBox.TabIndex = 1
         '
         'PhoneTextBox
@@ -65,7 +65,7 @@ Partial Class Form2
         Me.PhoneTextBox.Location = New System.Drawing.Point(362, 168)
         Me.PhoneTextBox.Name = "PhoneTextBox"
         Me.PhoneTextBox.ReadOnly = True
-        Me.PhoneTextBox.Size = New System.Drawing.Size(250, 34)
+        Me.PhoneTextBox.Size = New System.Drawing.Size(250, 30)
         Me.PhoneTextBox.TabIndex = 2
         '
         'GitHubTextBox
@@ -74,7 +74,7 @@ Partial Class Form2
         Me.GitHubTextBox.Location = New System.Drawing.Point(362, 218)
         Me.GitHubTextBox.Name = "GitHubTextBox"
         Me.GitHubTextBox.ReadOnly = True
-        Me.GitHubTextBox.Size = New System.Drawing.Size(250, 34)
+        Me.GitHubTextBox.Size = New System.Drawing.Size(250, 30)
         Me.GitHubTextBox.TabIndex = 3
         '
         'StopwatchTextBox
@@ -83,7 +83,7 @@ Partial Class Form2
         Me.StopwatchTextBox.Location = New System.Drawing.Point(362, 267)
         Me.StopwatchTextBox.Name = "StopwatchTextBox"
         Me.StopwatchTextBox.ReadOnly = True
-        Me.StopwatchTextBox.Size = New System.Drawing.Size(250, 34)
+        Me.StopwatchTextBox.Size = New System.Drawing.Size(250, 30)
         Me.StopwatchTextBox.TabIndex = 4
         '
         'PreviousButton
@@ -92,9 +92,9 @@ Partial Class Form2
         Me.PreviousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PreviousButton.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.PreviousButton.ForeColor = System.Drawing.Color.Black
-        Me.PreviousButton.Location = New System.Drawing.Point(186, 321)
+        Me.PreviousButton.Location = New System.Drawing.Point(167, 321)
         Me.PreviousButton.Name = "PreviousButton"
-        Me.PreviousButton.Size = New System.Drawing.Size(200, 40)
+        Me.PreviousButton.Size = New System.Drawing.Size(220, 40)
         Me.PreviousButton.TabIndex = 5
         Me.PreviousButton.Text = "PREVIOUS (CTRL + P)"
         Me.PreviousButton.UseVisualStyleBackColor = False
@@ -107,7 +107,7 @@ Partial Class Form2
         Me.NextButton.ForeColor = System.Drawing.Color.Black
         Me.NextButton.Location = New System.Drawing.Point(412, 321)
         Me.NextButton.Name = "NextButton"
-        Me.NextButton.Size = New System.Drawing.Size(200, 40)
+        Me.NextButton.Size = New System.Drawing.Size(226, 40)
         Me.NextButton.TabIndex = 6
         Me.NextButton.Text = "NEXT (CTRL + N)"
         Me.NextButton.UseVisualStyleBackColor = False
@@ -150,7 +150,7 @@ Partial Class Form2
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.DarkMagenta
-        Me.Label4.Location = New System.Drawing.Point(81, 224)
+        Me.Label4.Location = New System.Drawing.Point(81, 218)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(225, 28)
         Me.Label4.TabIndex = 10
@@ -173,9 +173,9 @@ Partial Class Form2
         Me.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DeleteButton.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.DeleteButton.ForeColor = System.Drawing.Color.Black
-        Me.DeleteButton.Location = New System.Drawing.Point(186, 377)
+        Me.DeleteButton.Location = New System.Drawing.Point(167, 377)
         Me.DeleteButton.Name = "DeleteButton"
-        Me.DeleteButton.Size = New System.Drawing.Size(200, 40)
+        Me.DeleteButton.Size = New System.Drawing.Size(220, 40)
         Me.DeleteButton.TabIndex = 12
         Me.DeleteButton.Text = "DELETE (CTRL + D)"
         Me.DeleteButton.UseVisualStyleBackColor = False
@@ -188,7 +188,7 @@ Partial Class Form2
         Me.EditButton.ForeColor = System.Drawing.Color.Black
         Me.EditButton.Location = New System.Drawing.Point(412, 377)
         Me.EditButton.Name = "EditButton"
-        Me.EditButton.Size = New System.Drawing.Size(200, 40)
+        Me.EditButton.Size = New System.Drawing.Size(226, 40)
         Me.EditButton.TabIndex = 13
         Me.EditButton.Text = "EDIT (CTRL + E)"
         Me.EditButton.UseVisualStyleBackColor = False
